@@ -8,19 +8,10 @@ import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./components/ImageModal/ImageModal";
 import "./App.css";
 import axios from "axios";
+import { Image } from "./App.types";
 
 const API_KEY = "QxwtyiynyLrOT1cpYeYexFds8RMCeu7pxWoIvifoCIY";
 const BASE_URL = "https://api.unsplash.com";
-
-interface Image {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  alt_description: string | null;
-  description: string | null;
-}
 
 const App = () => {
   const [query, setQuery] = useState<string>("");

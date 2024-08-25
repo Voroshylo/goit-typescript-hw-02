@@ -1,14 +1,7 @@
 import React from "react";
 import css from "./ImageModal.module.css";
+import { Image } from "../../App.types";
 import Modal from "react-modal";
-
-interface Image {
-  urls: {
-    regular: string;
-  };
-  alt_description: string | null;
-  description: string | null;
-}
 
 interface ImageCardProps {
   isOpen: boolean;
