@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 40px;
 }
 
@@ -13,7 +13,8 @@
   justify-content: center;
 }
 
-.input, .btn {
+.input,
+.btn {
   height: 40px;
   font-size: 20px;
 }
@@ -21,7 +22,7 @@
 .input {
   width: 240px;
   border: 1px solid transparent;
-  border-radius: 8px 0 0 8px;
+  border-radius: 50px 0 0 50px;
   background-color: #131212;
   color: white;
 }
@@ -33,7 +34,7 @@
 
 .btn {
   border: 1px solid #131212;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 50px 50px 0;
   padding: 0 1.2em;
   background-color: #131212;
   color: white;

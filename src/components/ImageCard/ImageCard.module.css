@@ -1,17 +1,25 @@
-
-.div{
-    display: flex;
+.div {
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  &:hover{
-    transform: scale(1.05);
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Додаємо плавний перехід для масштабування та тіні */
+  overflow: hidden; /* Це допоможе уникнути виходу елементів за межі кордону */
+  border-radius: 8px;
 }
 
-.img{
+.div:hover {
+  transform: scale(1.05); /* Трохи збільшуємо елемент при наведенні */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Додаємо тінь при наведенні */
+}
+
+.img {
   width: 100%;
-  height: 240px;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover; /* Робимо так, щоб зображення займало весь доступний простір, зберігаючи свої пропорції */
+  transition: opacity 0.3s ease; /* Додаємо плавний перехід для прозорості */
+}
+
+.div:hover .img {
+  opacity: 0.9; /* Трохи затемнюємо зображення при наведенні для ефекту фокусу */
 }

@@ -1,12 +1,16 @@
 .ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); /* Завжди 4 колонки */
+  gap: 15px; /* Проміжок між картками */
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .li {
+  display: flex;
+  justify-content: center; /* Центруємо картки по горизонталі */
+  align-items: center; /* Центруємо картки по вертикалі */
+  overflow: hidden; /* Уникаємо виходу контенту за межі картки */
   margin: 0;
 }
