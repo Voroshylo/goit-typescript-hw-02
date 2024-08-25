@@ -1,7 +1,7 @@
 .ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Завжди 4 колонки */
-  gap: 15px; /* Проміжок між картками */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -9,8 +9,8 @@
 
 .li {
   display: flex;
-  justify-content: center; /* Центруємо картки по горизонталі */
-  align-items: center; /* Центруємо картки по вертикалі */
-  overflow: hidden; /* Уникаємо виходу контенту за межі картки */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   margin: 0;
 }
