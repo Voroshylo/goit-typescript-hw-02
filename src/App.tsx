@@ -10,6 +10,12 @@ import "./App.css";
 import axios from "axios";
 import { Image } from "./App.types";
 
+interface UnsplashApiResponse {
+  total: number;
+  total_pages: number;
+  results: Image[];
+}
+
 const API_KEY = "QxwtyiynyLrOT1cpYeYexFds8RMCeu7pxWoIvifoCIY";
 const BASE_URL = "https://api.unsplash.com";
 
@@ -28,14 +34,17 @@ const App = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await axios.get(`${BASE_URL}/search/photos`, {
-          params: {
-            query,
-            page,
-            per_page: 16,
-            client_id: API_KEY,
-          },
-        });
+        const response = await axios.get<UnsplashApiResponse>(
+          `${BASE_URL}/search/photos`,
+          {
+            params: {
+              query,
+              page,
+              per_page: 16,
+              client_id: API_KEY,
+            },
+          }
+        );
         setImages((prevImage) => [...prevImage, ...response.data.results]);
       } catch (error) {
         setError("Please try again.");
