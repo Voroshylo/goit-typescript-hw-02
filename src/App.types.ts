@@ -7,3 +7,9 @@ export interface Image {
   alt_description: string | null;
   description: string | null;
 }
+
+export interface UnsplashApiResponse {
+  total: number;
+  total_pages: number;
+  results: Image[];
+}

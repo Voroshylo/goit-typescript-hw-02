@@ -9,12 +9,7 @@ import ImageModal from "./components/ImageModal/ImageModal";
 import "./App.css";
 import axios from "axios";
 import { Image } from "./App.types";
-
-interface UnsplashApiResponse {
-  total: number;
-  total_pages: number;
-  results: Image[];
-}
+import { UnsplashApiResponse } from "./App.types";
 
 const API_KEY = "QxwtyiynyLrOT1cpYeYexFds8RMCeu7pxWoIvifoCIY";
 const BASE_URL = "https://api.unsplash.com";
