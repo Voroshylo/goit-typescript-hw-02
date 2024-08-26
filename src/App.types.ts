@@ -13,3 +13,4 @@ export interface UnsplashApiResponse {
   total_pages: number;
   results: Image[];
 }
+//add interface//
